@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title> Title </title>
+        <link rel="stylesheet" href="{% static 'luachon/base.css' %}">
+    </head>
+<!--float: left  để trôi dạt về bên trái theo 1 hàng
+-->
+    <body>
+        <div class = "header">
+            <h1> my header </h1>
+        </div>
+        <div class = "menu" style = "color: ">
+            <ul>
+                <li> <a href="{% url 'list' %}" style="color: rgb(35, 201, 43);">danh sách</a> </li>
+                <li> <a href="{% url 'index' %}" style="color: chartreuse;">trang chủ</a> </li>
+                <li> <a href="{% url 'login' %}">đăng nhập</a></li>
+                <li> <a href="{% url 'blog' %}" style = "color: rgb(35, 201, 43);">Blog</a> </li>
+            </ul>
+        </div>
+        <div class = "noidung">
+            {% block content1 %}
+            <!--phần giữa này của trang web sẽ thay đổi dựa vào đường dẫn content1-->
+            {% endblock %}
+        </div>
+    </body>
+</html>

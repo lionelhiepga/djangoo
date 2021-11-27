@@ -1,0 +1,12 @@
+{% extends "luachon/base.html" %}
+    {% block content1 %}
+        {% if ds_quest %}
+            <ul>{% for item in ds_quest%}
+                    <p><a href="#">{{ item.question_text }}</a></p>
+                {% endfor %} 
+            </ul>
+        {% else %}
+            <h3 style= "color :brown"> Không có dữ liệu nào !!!</h3>   
+        
+        {% endif %}
+    {% endblock %}

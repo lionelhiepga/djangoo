@@ -1,0 +1,7 @@
+{% extends "luachon/base.html" %}
+{% block content1 %}
+    <p>blog list</p>
+    {% for item in pf %}
+        <p><a href="{% url 'detail' item.id %}">{{item.title}}</a></p>
+    {%  endfor %}
+{% endblock %}

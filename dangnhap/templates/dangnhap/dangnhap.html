@@ -1,0 +1,14 @@
+{% extends "luachon/base.html" %}
+
+{% block content1 %}
+
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ f.as_p }} 
+            <!-- trải ngang f ra-->
+            <input type="submit" value="add">
+        </form>
+    </div> 
+    
+{% endblock content1 %}

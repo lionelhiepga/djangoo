@@ -1,0 +1,18 @@
+{% extends "luachon/base.html" %}
+{% block content1 %}
+    {% if qs %}
+    <form action="{% url 'vote' qs.id %}" method="POST"> <!--khi ấn nút gửi web đưa sang 1 trang khác để lưu dữ liệu-->
+        {% csrf_token %}                           <!--bảo mật trong python-->
+        
+        <P><b>{{ qs.question_text}}</b></P>
+        <ul>{% for item in qs.choice_set.all %}
+                <input name="dvc" type="radio" value="{{item.id}}">{{item.choice_text }}
+            {% endfor %} 
+        </ul>
+        <p><input type="submit" value="gửi"></p>
+    </form>
+    {% else %}
+        <h3 style= "color :brown"> Không tồn tại câu hỏi !!!</h3>   
+    
+    {% endif %}
+{% endblock %}

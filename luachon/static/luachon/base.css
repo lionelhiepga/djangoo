@@ -1,0 +1,24 @@
+.header{
+    padding: 30px;
+    background-color : #CCC;
+}
+.menu{
+    background-color:blue;
+    color: white;
+}
+.menu ul li{
+    float: left;
+    padding: 6px 7px;
+}
+.menu::after{
+    clear: both;
+    display: table;
+    content: "";
+}
+.menu ul li :hover{
+    background-color: gray;
+    color: mediumblue;
+}
+.menu ul{
+    list-style: none;
+}

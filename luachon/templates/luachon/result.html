@@ -1,0 +1,13 @@
+{% extends "luachon/base.html" %}
+
+{% block content1 %}   
+    {% if q %}
+        <h1>{{ q.question_text }}</h1>
+        <p>kết quả của cuộc bình chọn là:</p>
+        
+            {% for item in q.choice_set.all %}
+            <p>{{item.choice_text}} : <span style="color: blue;">{{item.vote}}</span> </p>
+            {% endfor %}
+        <a href="{% url 'list'%}"><input type="submit" value="vote tiếp"></a>    
+    {% endif %}
+{% endblock content1 %}
