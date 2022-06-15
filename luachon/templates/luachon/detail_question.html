@@ -1,7 +1,7 @@
 {% extends "luachon/base.html" %}
 {% block content1 %}
     {% if qs %}
-    <form action="{% url 'vote' qs.id %}" method="POST"> <!--khi ấn nút gửi web đưa sang 1 trang khác để lưu dữ liệu-->
+    <form action="{% url 'luachon:vote' qs.id %}" method="POST"> <!--khi ấn nút gửi web đưa sang 1 trang khác để lưu dữ liệu-->
         {% csrf_token %}                           <!--bảo mật trong python-->
         
         <P><b>{{ qs.question_text}}</b></P>

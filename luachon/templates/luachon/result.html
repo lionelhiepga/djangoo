@@ -8,6 +8,6 @@
             {% for item in q.choice_set.all %}
             <p>{{item.choice_text}} : <span style="color: blue;">{{item.vote}}</span> </p>
             {% endfor %}
-        <a href="{% url 'list'%}"><input type="submit" value="vote tiếp"></a>    
+        <a href="{% url 'luachon:list'%}"><input type="submit" value="vote tiếp"></a>    
     {% endif %}
 {% endblock content1 %}

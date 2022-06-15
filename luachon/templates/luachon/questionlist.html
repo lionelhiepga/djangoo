@@ -2,7 +2,7 @@
     {% block content1 %}
         {% if ds_quest %}
             <ul>{% for item in ds_quest%}
-                    <p><a href="#">{{ item.question_text }}</a></p>
+                    <p><a href="{% url 'luachon:detail' %}">{{ item.question_text }}</a></p>
                 {% endfor %} 
             </ul>
         {% else %}
